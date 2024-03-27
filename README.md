@@ -22,6 +22,18 @@ def soma_ate_n(n):
         soma += i
     return soma
 ```
+
+3. Python
+```java
+public class SomaAteN {
+    public static int somaAteN(int n) {
+        int soma = 0;
+        for (int i = 1; i <= n; i++) {
+            soma += i;
+        }
+        return soma;
+    }
+```
 Essas formas são apenas para exemplo e claramente poderiam ser melhoradas, mas vamos utilizar apenas como exemplificação.
 
 Em haskell podriamos obter o mesmo resultado em apens uma linha de código, usando do seguinte algoritmo:
@@ -309,3 +321,21 @@ outraLista = 'a' : 'b' : 'c' : []
 - filter: Retorna uma lista contendo apenas os elementos que satisfazem um predicado.
 
 
+# where 
+A palavra-chave where em Haskell é usada para definir variáveis locais dentro de uma função, permitindo que você organize o código de uma maneira mais clara e legível. A cláusula where é colocada no final da definição de uma função e é usada para fornecer definições locais que são usadas apenas dentro dessa função específica.
+
+```haskell
+quadradoMaisCubo :: Int -> Int -> Int
+quadradoMaisCubo x y = quadrado + cubo
+    where
+        quadrado = x ^ 2
+        cubo = y ^ 3
+```
+
+# Comprensão de listas
+A compreensão de listas, também conhecida como "list comprehension" em inglês, é uma construção poderosa em Haskell (e em várias outras linguagens funcionais) que permite criar novas listas de maneira concisa e expressiva, aplicando transformações e filtros a uma lista existente. Ela segue uma sintaxe simples e intuitiva, facilitando a criação de listas complexas de forma elegante.
+
+A sintaxe geral de uma compreensão de lista em Haskell é a seguinte:
+```haskell
+[expressão | gerador1, gerador2, ..., geradorN, condição1, condição2, ..., condiçãoM]
+```
