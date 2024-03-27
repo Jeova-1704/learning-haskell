@@ -23,7 +23,7 @@ def soma_ate_n(n):
     return soma
 ```
 
-3. Python
+3. JAVA
 ```java
 public class SomaAteN {
     public static int somaAteN(int n) {
@@ -338,4 +338,18 @@ A compreensão de listas, também conhecida como "list comprehension" em inglês
 A sintaxe geral de uma compreensão de lista em Haskell é a seguinte:
 ```haskell
 [expressão | gerador1, gerador2, ..., geradorN, condição1, condição2, ..., condiçãoM]
+```
+- expressão: A expressão que será avaliada para cada elemento da lista resultante.
+- gerador: Define como os elementos são gerados. Pode ser uma ligação de variável (x <- lista) ou uma tupla de ligações de variável ((x, y) <- lista).
+- condição: Uma condição opcional que os elementos gerados devem satisfazer.
+
+Aqui está um exemplo simples de compreensão de lista em Haskell:
+```haskell
+pares :: [Int]
+pares = [x | x <- [1..10], even x]
+```
+ou
+```haskell
+pares :: [Int]
+pares = [x | x <- [1..10], x `mod` 2 == 0]
 ```
