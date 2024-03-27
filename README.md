@@ -83,7 +83,8 @@ Essa abordagem de tipagem estática ajuda a detectar muitos erros de programaç�
 
 
 # como instalar o haskell
-...
+Para instalr é mais simples do que você pensa, seguindo apenas os passos a passos do site oficial do haskell é possivel fazer o download. 
+[Site oficial para download](https://www.haskell.org/ghcup/)
 
 
 
