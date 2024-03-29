@@ -282,9 +282,8 @@ positivoOuNegativo x
     | otherwise = "negativo"
 ```
 
-# Guarda
-Em Haskell, não existe uma estrutura de controle chamada "gurada". Parece que houve um erro de digitação ou confusão com a terminologia.
-No entanto, pode ser que você esteja se referindo às "guardas" (guards) em Haskell. As guardas são uma maneira de expressar condicionais em definições de função, permitindo avaliar diferentes expressões com base em condições booleanas.
+# Guardas
+As guardas são uma maneira de expressar condicionais em definições de função, permitindo avaliar diferentes expressões com base em condições booleanas.
 Aqui está um exemplo de como você pode usar guardas em Haskell:
 ```haskell
 positivoOuNegativo :: Int -> String
