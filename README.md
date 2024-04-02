@@ -356,7 +356,9 @@ pares = [x | x <- [1..10], x `mod` 2 == 0]
 
 # Recursividade
 
-- Vamos começar a falar sobre recursividade, para esse exemplo vamos utilizar um algoritmo que calcula o fatorial de um número N positivo.
+- Recursão, ou recursividade, é um conceito fundamental na programação que se refere à capacidade de uma função chamar a si mesma, direta ou indiretamente. Em outras palavras, uma função recursiva é uma função que se define em termos de si mesma. Quando uma função é chamada, ela executa um conjunto de instruções e, em seguida, pode chamar a si mesma para realizar uma parte da tarefa. Isso continua até que uma condição de parada seja atendida, momento em que a função começa a retornar valores para cada chamada recursiva, permitindo que as chamadas se desenrolem e a execução seja concluída. A recursão é comumente usada em algoritmos que podem ser naturalmente definidos em termos de casos menores do mesmo problema. Exemplos clássicos incluem o cálculo de fatorial, a sequência de Fibonacci, a busca em árvores, entre outros.
+
+Um exemplo simples de função recursiva em Haskell para calcular o fatorial de um número é:
 ```haskell
 fatorial :: Int -> Int 
 fatorial n
@@ -369,5 +371,16 @@ main = do
 ```
 
 como fuciona em forma de desenho a cada interação na recursividade, onde o numero usando como exemplo foi o fatorial de 5, que a cada recursão ele perde um (n-1) e vai ficando a baixo da pilha de chamadas, que ao final ele retorna 1 quando for 0 (n == 0 = 1) e vai ultiplicando os valores de cima para baixo até chegar ao valor inicial, que no nosso caso foi 5.
+
+``` markdown
+1. fatorial(5) - Retorna 5 * 24 (120)
+2. fatorial(4) - Retorna 4 * 6 (24)
+3. fatorial(3) - Retorna 3 * 2 (6)
+4. fatorial(2) - Retorna 2 * 1 (2)
+5. fatorial(1) - Retorna 1 * 1 (1)
+6. fatorial(0) - Retorna 1
+```
+
 </br>
+
 ![alt text](image.png)
