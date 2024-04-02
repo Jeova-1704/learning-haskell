@@ -369,4 +369,5 @@ main = do
 ```
 
 como fuciona em forma de desenho a cada interação na recursividade, onde o numero usando como exemplo foi o fatorial de 5, que a cada recursão ele perde um (n-1) e vai ficando a baixo da pilha de chamadas, que ao final ele retorna 1 quando for 0 (n == 0 = 1) e vai ultiplicando os valores de cima para baixo até chegar ao valor inicial, que no nosso caso foi 5.
+</br>
 ![alt text](image.png)
