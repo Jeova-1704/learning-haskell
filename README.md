@@ -384,3 +384,101 @@ como fuciona em forma de desenho a cada interação na recursividade, onde o num
 </br>
 
 ![alt text](image.png)
+
+---
+
+- Outro exemplo é para encontrar o resto da divisão entre dois números
+
+``` haskell
+divrec :: Int -> Int -> Int
+divrec a b 
+    | b > a = a
+    | b == a = 0
+    | otherwise = divrec(a - b) b
+
+main :: IO()
+main = do
+    print (divrec 15 4)
+```
+</br>
+
+![alt text](image-1.png)
+
+---
+
+- multiplicacao usando soma por meio da recursividade 
+
+``` haskell
+multirecursiva :: Int -> Int -> Int
+multirecursiva a b
+    | b == 1 = a 
+    | otherwise = a + multirecursiva a (b-1)
+
+main :: IO()
+main = do
+    print (multirecursiva 10 7)
+```
+![alt text](image-2.png)
+![alt text](image-3.png) 
+
+
+# Recrusão em calda 
+- Recursão em cauda (ou tail recursion, em inglês) é um conceito importante em programação funcional. É uma forma específica de recursão em que a chamada recursiva é a última operação realizada pela função antes de retornar um valor. Em outras palavras, o resultado da chamada recursiva é imediatamente passado de volta como resultado da função, sem a necessidade de fazer mais nenhum cálculo. Isso é particularmente relevante porque, em algumas linguagens de programação, como Haskell, a recursão em cauda pode ser otimizada pelo compilador para evitar estouro de pilha, já que não é necessário manter um registro das chamadas recursivas anteriores.Para que uma função seja recursiva em cauda, a chamada recursiva deve ser a última coisa que ela faz antes de retornar. Isso geralmente significa que a chamada recursiva deve ser usada como argumento de retorno da função, ou seja, ela deve ser a "cauda" da definição da função
+```haskell
+fatorialCauda :: Int -> Int -> Int
+fatorialCauda x acumulado
+    | x == 0 = acumulado
+    | x > 0 = fatorialCauda (x-1) (x * acumulado)
+
+main :: IO()
+main = do
+    print (fatorialCauda 5 1)
+```
+A chamada recursiva fatorialCauda (x-1) (x * acumulado) é a última coisa que a função faz antes de retornar, o que torna essa função um exemplo de recursão em cauda. Isso permite que ela seja otimizada para uma forma iterativa eficiente, evitando assim estouro de pilha.
+
+
+- Listas 
+Em Haskell, uma lista é uma estrutura de dados fundamental e extremamente flexível. Elas podem ser homogêneas (ou seja, todos os elementos têm o mesmo tipo) e são construídas recursivamente. Uma lista é uma coleção ordenada de elementos do mesmo tipo. A sintaxe básica para uma lista em Haskell é colocar os elementos entre colchetes e separá-los por vírgulas
+
+Há algumas formas comuns de trabalhar com listas em Haskell:
+
+1. Acesso aos elementos da lista:
+- head: Retorna o primeiro elemento da lista.
+- last: Retorna o último elemento da lista.
+- !!: Retorna o elemento de índice específico da lista.
+
+2. Operações básicas:
+
+- ++: Concatena duas listas.
+- : (cons): Adiciona um elemento ao início de uma lista.
+- null: Verifica se uma lista está vazia.
+- length: Retorna o tamanho de uma lista.
+
+3. Operações de manipulação:
+
+- map: Aplica uma função a cada elemento da lista, produzindo uma nova lista com os resultados.
+- filter: Retorna uma lista contendo apenas os elementos que satisfazem um predicado.
+
+4. Operações de geração de listas:
+
+- [start..end]: Gera uma lista de valores a partir de start até end.
+-  [start, increment..end]: Gera uma lista de valores a partir de start, com um incremento específico, até end.
+
+5. Recursão em listas:
+
+- A recursão é uma técnica comum para processar listas em Haskell. Funções frequentemente são definidas utilizando recursão para processar elementos de uma lista.
+
+Listas em Haskell são imutáveis, o que significa que não podem ser modificadas após serem criadas. No entanto, você pode criar novas listas a partir de listas existentes, aplicando operações ou funções a elas.
+Esses são apenas alguns dos conceitos básicos sobre listas em Haskell. Elas são uma parte central e poderosa da linguagem e são amplamente utilizadas em muitos programas Haskell.
+
+- Exemplo de codigo em haskell que usa recursão e listas para calcular o tamanho de uma lista me haskell 
+``` haskell 
+comp :: [Int] -> Int
+comp [] = 0
+comp (h:t) = 1 + comp t
+
+main :: IO()
+main = do
+    print(comp [1, 2, 3, 4, 5])
+```
+como funciona o algoritmo:
