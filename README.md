@@ -482,3 +482,12 @@ main = do
     print(comp [1, 2, 3, 4, 5])
 ```
 como funciona o algoritmo:
+
+![alt text](image-4.png)
+
+![alt text](image-5.png)
+
+![alt text](image-6.png)
+
+
+como observado a medida que vai passando a recursão, vai cortando sempre o elemento da cabeça (head -- h) e vai sempre passando a calda para a proxima interação e com isso vai incrementando + 1 na recursão, que ao final, quando tiver 0 elementos ele retona toda a soma dessa interação.
