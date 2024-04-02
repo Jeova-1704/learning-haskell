@@ -491,3 +491,33 @@ como funciona o algoritmo:
 
 
 como observado a medida que vai passando a recursão, vai cortando sempre o elemento da cabeça (head -- h) e vai sempre passando a calda para a proxima interação e com isso vai incrementando + 1 na recursão, que ao final, quando tiver 0 elementos ele retona toda a soma dessa interação.
+
+- Outra forma de fazer a mesma função acima é:
+```haskell
+comp :: [Int] -> Int
+comp lista 
+    | null lista = 0
+    | otherwise = 1 + comp (tail lista)
+
+main :: IO()
+main = do
+    print(comp [1, 2, 3, 4, 5])
+```
+
+
+- Um outro algoritmos que segue a mesma logica dos acima é o para procurar por um char dento deu ma lista de chars, exemplo:
+```haskell
+possuichar :: [Char] -> Char -> Bool
+possuichar chars char
+    | null chars = False
+    | char == head chars = True
+    | otherwise = possuichar (tail chars) char
+
+
+main :: IO()
+main = do
+    let chars = ['a', 'b', 'c', 'd', 'e']
+    print (possuichar chars 'a')
+```
+
+nele, usando o mesmo conceito de calda e cabeça da minha lista, usamos também o mesmo conceito de exemplos anteriores.
