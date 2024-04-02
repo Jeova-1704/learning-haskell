@@ -170,9 +170,9 @@ firstLetter :: Char
 firstLetter = 'A'
 ```
 
-4. Booleano (Boll)
+4. Booleano (Bool)
 ```haskell
-logado :: Boll
+logado :: Bool
 logado = True
 ```
 
@@ -354,3 +354,22 @@ ou
 pares :: [Int]
 pares = [x | x <- [1..10], x `mod` 2 == 0]
 ```
+
+
+
+# Recursividade
+
+- Vamos começar a falar sobre recursividade, para esse exemplo vamos utilizar um algoritmo que calcula o fatorial de um número N positivo.
+```haskell
+fatorial :: Int -> Int 
+fatorial n
+    | n == 0 = 1
+    | n > 0 = n * fatorial (n-1)
+
+main :: IO()
+main = do
+    print (fatorial 5)
+```
+
+como fuciona em forma de desenho a cada interação na recursividade, onde o numero usando como exemplo foi o fatorial de 5, que a cada recursão ele perde um (n-1) e vai ficando a baixo da pilha de chamadas, que ao final ele retorna 1 quando for 0 (n == 0 = 1) e vai ultiplicando os valores de cima para baixo até chegar ao valor inicial, que no nosso caso foi 5.
+![alt text](image.png)
