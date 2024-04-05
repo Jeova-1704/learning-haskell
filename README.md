@@ -422,7 +422,7 @@ main = do
 ![alt text](image-3.png) 
 
 
-# Recrusão em calda 
+# Recrusão em cauda 
 - Recursão em cauda (ou tail recursion, em inglês) é um conceito importante em programação funcional. É uma forma específica de recursão em que a chamada recursiva é a última operação realizada pela função antes de retornar um valor. Em outras palavras, o resultado da chamada recursiva é imediatamente passado de volta como resultado da função, sem a necessidade de fazer mais nenhum cálculo. Isso é particularmente relevante porque, em algumas linguagens de programação, como Haskell, a recursão em cauda pode ser otimizada pelo compilador para evitar estouro de pilha, já que não é necessário manter um registro das chamadas recursivas anteriores.Para que uma função seja recursiva em cauda, a chamada recursiva deve ser a última coisa que ela faz antes de retornar. Isso geralmente significa que a chamada recursiva deve ser usada como argumento de retorno da função, ou seja, ela deve ser a "cauda" da definição da função
 ```haskell
 fatorialCauda :: Int -> Int -> Int
@@ -490,7 +490,7 @@ como funciona o algoritmo:
 ![alt text](image-6.png)
 
 
-como observado a medida que vai passando a recursão, vai cortando sempre o elemento da cabeça (head -- h) e vai sempre passando a calda para a proxima interação e com isso vai incrementando + 1 na recursão, que ao final, quando tiver 0 elementos ele retona toda a soma dessa interação.
+como observado a medida que vai passando a recursão, vai cortando sempre o elemento da cabeça (head -- h) e vai sempre passando a cauda para a proxima interação e com isso vai incrementando + 1 na recursão, que ao final, quando tiver 0 elementos ele retona toda a soma dessa interação.
 
 - Outra forma de fazer a mesma função acima é:
 ```haskell
@@ -520,4 +520,4 @@ main = do
     print (possuichar chars 'a')
 ```
 
-nele, usando o mesmo conceito de calda e cabeça da minha lista, usamos também o mesmo conceito de exemplos anteriores.
+nele, usando o mesmo conceito de cauda e cabeça da minha lista, usamos também o mesmo conceito de exemplos anteriores.
